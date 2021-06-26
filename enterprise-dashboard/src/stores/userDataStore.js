@@ -10,7 +10,7 @@ class UserDataStore {
     this.rootStore = rootStore;
     Geocode.setApiKey(API_KEY);
     this.loadData()
-    this.userLocation()
+    // this.userLocation();
   }
 
   // @action("Search for user location")
