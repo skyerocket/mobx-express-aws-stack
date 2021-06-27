@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack');
 
 const PUBLIC_PATH = '/';
 
@@ -49,5 +50,6 @@ module.exports = {
             filename: "index.html",
             title: "Learning Webpack"
         }),
+        new Dotenv()
     ]
 }

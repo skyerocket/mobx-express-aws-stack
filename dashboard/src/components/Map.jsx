@@ -5,7 +5,7 @@ import '@mapbox/mapbox-gl-traffic/mapbox-gl-traffic.css';
 import {Button} from 'antd'
 import { observer, inject } from "mobx-react";
 
-const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1Ijoic3Nzb3VuZDEiLCJhIjoiY2txZGlzMHY3MHlkbjJ3cDk1NjR6am4zOSJ9.Mv-FNHKZPurlU5Jd0f1HEQ';
+const token = process.env.MAPBOX_ACCESS_TOKEN
 
 function Map(props) {   
     const { dataForMap } = props.demoStore;
@@ -23,7 +23,7 @@ function Map(props) {
             <MapGL
                 style={{ width: '100%', height: '400px' }}
                 mapStyle='mapbox://styles/mapbox/light-v9'
-                accessToken={MAPBOX_ACCESS_TOKEN}
+                accessToken={token}
                 onViewportChange={setViewport}
                 {...viewport}
             >
