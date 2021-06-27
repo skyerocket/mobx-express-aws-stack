@@ -9,3 +9,5 @@ make sure you have `npm install -g serverless`
 `cd dashboard` where frontend sits 
 
 `yarn && yarn start`
+
+db / api link / crendentials in env
