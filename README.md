@@ -16,7 +16,8 @@ db / api link / crendentials in env
 
 live demo : https://mobx-express-aws-stack.vercel.app/ 
 
-screen: 
+screen: ![dashboard](dashboard.gif)
+
 
 
 
