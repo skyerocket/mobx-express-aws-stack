@@ -170,7 +170,7 @@ class Table extends React.Component {
     ];
     return (
       <AntTable
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
         columns={columns}
         dataSource={dataForTable}
       />
