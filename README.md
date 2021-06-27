@@ -2,6 +2,8 @@
 
 A dashboard boilerplate for future data visualisation
 
+(Not mobile friendly however)
+
 `aws config ` to set your credentials
 
 make sure you have `npm install -g serverless`
