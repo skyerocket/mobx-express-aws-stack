@@ -16,7 +16,7 @@ function Map(props) {
         longitude: 145.2790,
         zoom: 9
       });
-      
+
     return (
         <div>
             <Button onClick={toggleTraffic}>{showTraffic ? `turn off` : `showTraffic`}</Button>
