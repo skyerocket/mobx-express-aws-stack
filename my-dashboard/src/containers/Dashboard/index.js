@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import { observer, inject } from "mobx-react";
-import { computed } from "mobx";
 import PropTypes from "prop-types";
 
-import Table from '../../components/Table/Table'
+import Table from "../../components/Table/Table";
 import Wrapper from "./Wrapper";
 import Row from "./Row";
 import Column from "./Column";
 import Overlay from "./Overlay";
-import InfoBox from "../../components/InfoBox";
 import ChartBox from "../../components/ChartBox";
-import WorldMap from "../../components/WorldMap";
-import Summary from "../../components/Summary";
+// import WorldMap from "../../components/WorldMap";
 
 import Spinner from "./Spinner";
 
@@ -22,14 +19,6 @@ class Dashboard extends Component {
     userDataStore: PropTypes.object,
   };
 
-  @computed
-  get infoBoxes() {
-    const { userInfo } = this.props.userDataStore;
-    return userInfo.map((info, idx) => (
-      <InfoBox key={`info-box-${idx}`} data={info} />
-    ));
-  }
-
   render() {
     return (
       <Wrapper>
@@ -37,14 +26,13 @@ class Dashboard extends Component {
           <Column>
             <ChartBox />
           </Column>
-          <Column>
-          </Column>
+          <Column></Column>
         </Row>
         <Row>
           <Table />
         </Row>
         <Row>
-          <WorldMap />
+          {/* <WorldMap /> */}
         </Row>
         <Overlay active={this.props.userDataStore.fetchingData ? 1 : 0}>
           <Spinner />
