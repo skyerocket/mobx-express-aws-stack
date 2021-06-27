@@ -19,7 +19,7 @@ function Map(props) {
 
     return (
         <div>
-            <Button onClick={toggleTraffic}>{showTraffic ? `turn off` : `showTraffic`}</Button>
+            <Button style={{marginBottom: '20px'}} onClick={toggleTraffic}>{showTraffic ? `turn off` : `showTraffic`}</Button>
             <MapGL
                 style={{ width: '100%', height: '400px' }}
                 mapStyle='mapbox://styles/mapbox/light-v9'

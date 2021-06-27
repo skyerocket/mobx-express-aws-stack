@@ -33,7 +33,7 @@ function App() {
             </Menu.Item>
           </Menu>
         </Sider>
-        <Content>
+        <Content style={{margin: '20px'}}>
           {index ===1 && <Table />}
           {index ===2 && <Chart />}
           {index ===3 && <Map />}
