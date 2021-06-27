@@ -3,7 +3,6 @@ import MapGL, { TrafficControl, Source, Layer } from '@urbica/react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-traffic/mapbox-gl-traffic.css';
 import {Button} from 'antd'
-import {data} from './data'
 import { observer, inject } from "mobx-react";
 
 const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1Ijoic3Nzb3VuZDEiLCJhIjoiY2txZGlzMHY3MHlkbjJ3cDk1NjR6am4zOSJ9.Mv-FNHKZPurlU5Jd0f1HEQ';
