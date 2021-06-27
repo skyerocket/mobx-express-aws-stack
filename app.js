@@ -1,3 +1,4 @@
+require('dotenv').config()
 const serverless = require('serverless-http');
 const express = require('express')
 const cors = require('cors')
@@ -6,16 +7,16 @@ const port = 3000
 app.use(cors())
 
 const axios = require('axios');
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4ODY0OGVkNy01OGQxLTQzZjQtYmEyNi02ZWE0YzljYThmNWYiLCJpZCI6NTk1NzEsImlhdCI6MTYyNDQ3Njk3OX0.QNF3DIMw-WSztBH1FKUh1Elyt-lYD-61UxzWdfEz7Qo'
+const token = process.env.API_TOKEN
 axios.defaults.headers.common = {'Authorization': `bearer ${token}`}
 
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'postgres',
-  host: 'postgresdb.cjgnjmqdsaur.ap-southeast-2.rds.amazonaws.com',
-  database: 'postgres',
-  password: 'test1234567',
-  port: '5432'
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT
 })
 
 const getAllAccounts = (request, response) => {
@@ -29,7 +30,6 @@ const getAllAccounts = (request, response) => {
   })
 }
 
-
 app.get('/', (req, res) => {
     axios.get('https://api.cesium.com/v1/assets')
         .then(response => {
@@ -41,7 +41,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/db', getAllAccounts)
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

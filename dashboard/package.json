@@ -1,7 +1,7 @@
 {
-  "name": "mobx-demo-post-reactions",
+  "name": "demo",
   "version": "1.0.0",
-  "description": "A simle app to showcae mobx features",
+  "description": "frontend of the demo",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shrestharosy/mobx-demo-post-reactions.git"
+    "url": "git+https://github.com/sssound1/mobx-express-aws-stack.git"
   },
   "keywords": [],
-  "author": "Rosy Shrestha",
+  "author": "sssound1",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shrestharosy/mobx-demo-post-reactions/issues"
+    "url": "https://github.com/sssound1/mobx-express-aws-stack/issues"
   },
-  "homepage": "http://shrestharosy.github.io/mobx-demo-post-reactions",
+  "homepage": "https://mobx-express-aws-stack.vercel.app/",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
